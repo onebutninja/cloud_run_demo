@@ -5,10 +5,10 @@ FROM python:3.9-slim
 ENV PYTHONUNBUFFERED True
 
 #Expose port 8080
-# EXPOSE 8080
+EXPOSE 8080
 
 # Copy local code to the container image.
-ENV APP_HOME .
+ENV APP_HOME /app
 WORKDIR $APP_HOME
 COPY . ./
 
