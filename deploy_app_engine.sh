@@ -16,5 +16,5 @@ git checkout -t origin/main
 #gcloud app deploy app.yaml
 
 #Cloud Run
-gcloud builds submit --tag gcr.io/xyz-lab/cloud_run_demo
-gcloud run deploy cloud_run_demo --image gcr.io/xyz-lab/cloud_run_demo --region europe-west2 --platform managed --allow-unauthenticated
+gcloud builds submit --tag gcr.io/xyz-lab-338017/cloud_run_demo
+gcloud run deploy cloud_run_demo --image gcr.io/xyz-lab-338017/cloud_run_demo --region europe-west2 --platform managed --allow-unauthenticated
