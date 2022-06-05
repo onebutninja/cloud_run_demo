@@ -7,8 +7,8 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello_world():
-    name = "Dimitris & Maria"
-    return f"Hello {name}!"
+    name = os.environ.get("NAME", "World")
+    return "Hello {}!".format(name)
 
 
 if __name__ == "__main__":

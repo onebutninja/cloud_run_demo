@@ -17,7 +17,7 @@ COPY . ./
 
 #install all requirements in requirements.txt
 #RUN pip install -r app/requirements.txt
-# RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
 #Copy all files in current directory into app directory
 #COPY . /app
@@ -30,4 +30,4 @@ COPY . ./
 
 
 #CMD exec gunicorn --bind :$PORT --workers 1 --threads 8 app:app
-CMD ["python","app.py"]
+CMD exec gunicorn --bind :$PORT --workers 1 --threads 8 --timeout 0 main:app
