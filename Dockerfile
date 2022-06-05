@@ -8,7 +8,7 @@ ENV PYTHONUNBUFFERED True
 # EXPOSE 8080
 
 # Copy local code to the container image.
-ENV APP_HOME /app
+ENV APP_HOME .
 WORKDIR $APP_HOME
 COPY . ./
 
@@ -30,4 +30,4 @@ COPY . ./
 
 
 #CMD exec gunicorn --bind :$PORT --workers 1 --threads 8 app:app
-CMD python3 app.py
+CMD ["python","app.py"]
